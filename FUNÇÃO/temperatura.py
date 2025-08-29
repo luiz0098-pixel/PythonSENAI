@@ -1,19 +1,15 @@
-print("conversor de temperatura")
+print("Conversor de Temperatura")
 print("")
 
 def celsius_fahrenheit(graus):
-    n1 = graus  * 1.8 
-    fahrenheit = n1 + 32
-    return fahrenheit
+    return graus * 1.8 + 32
 
-def celsius_kelvin(kelvin):
-    parakelvin = graus + 273
-    return parakelvin
+def celsius_kelvin(graus):
+    return graus + 273.15   # valor mais correto é 273.15, não 273
 
-def exibir_conversão(graus):
-    print("O resultado é", celsius_fahrenheit(graus),"em fahrenheit")
-    print("O resultado", celsius_kelvin(graus), "em kelvin")
-   
+def exibir_conversao(graus):
+    print("O resultado é", celsius_fahrenheit(graus), "°F (Fahrenheit)")
+    print("O resultado é", celsius_kelvin(graus), "K (Kelvin)")
 
-graus = float(input("Digite a temperatura:"))
-exibir_conversão(graus)
+graus = float(input("Digite a temperatura em °C: "))
+exibir_conversao(graus)
